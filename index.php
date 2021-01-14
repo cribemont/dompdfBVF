@@ -5,14 +5,18 @@ require 'vendor/autoload.php';
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
-// instantiate and use the dompdf class
+// Load et MAJ du HTML
 $html = file_get_contents(__DIR__ .  "/certificat_de_realisation.html");
 $html = str_replace("{folder}", "https://ns305834.ip-37-187-23.eu/bvf/dompdfBVF", $html);
 
+// Création DomPDF
 $options = new Options();
+// Fix pour les images en remote ?
 $options->set('isRemoteEnabled', TRUE);
 $dompdf = new Dompdf($options);
 
+
+// Context SSL ?
 $context = stream_context_create([ 
 	'ssl' => [ 
 		'verify_peer' => FALSE, 
