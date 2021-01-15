@@ -34,7 +34,7 @@ $dompdf->render();
 // Output the generated PDF to Browser
 $dompdf->stream(); */
 $phpWord = new \PhpOffice\PhpWord\PhpWord();
-$templateProcessor = new TemplateProcessor('certificat_de_realisation_dynamique.docx');
+$templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor('certificat_de_realisation_dynamique.docx');
 
 // Texte
 $templateProcessor->setValues(array('{nom_stagiaire}' => 'John', '{nom_formateur}' => 'Doe'));
