@@ -7,9 +7,18 @@ namespace Composer\Autoload;
 class ComposerStaticInitcc0a69504a0bc0d162a554a21ce0785c
 {
     public static $prefixLengthsPsr4 = array (
+        'Z' => 
+        array (
+            'Zend\\Escaper\\' => 13,
+        ),
         'S' => 
         array (
             'Svg\\' => 4,
+        ),
+        'P' => 
+        array (
+            'PhpOffice\\PhpWord\\' => 18,
+            'PhpOffice\\Common\\' => 17,
         ),
         'F' => 
         array (
@@ -22,9 +31,21 @@ class ComposerStaticInitcc0a69504a0bc0d162a554a21ce0785c
     );
 
     public static $prefixDirsPsr4 = array (
+        'Zend\\Escaper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-escaper/src',
+        ),
         'Svg\\' => 
         array (
             0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+        ),
+        'PhpOffice\\PhpWord\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpoffice/phpword/src/PhpWord',
+        ),
+        'PhpOffice\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpoffice/common/src/Common',
         ),
         'FontLib\\' => 
         array (
@@ -54,6 +75,7 @@ class ComposerStaticInitcc0a69504a0bc0d162a554a21ce0785c
         'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
         'HTML5_Tokenizer' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Tokenizer.php',
         'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
+        'PclZip' => __DIR__ . '/..' . '/pclzip/pclzip/pclzip.lib.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

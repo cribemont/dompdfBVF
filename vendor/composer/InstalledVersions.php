@@ -24,24 +24,24 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'b1ec0e98805cd6212768bc7dfe6dd8c30299656f',
     'name' => '__root__',
   ),
   'versions' => 
   array (
     '__root__' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'b1ec0e98805cd6212768bc7dfe6dd8c30299656f',
     ),
     'dompdf/dompdf' => 
     array (
@@ -51,6 +51,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '8768448244967a46d6e67b891d30878e0e15d25c',
+    ),
+    'pclzip/pclzip' => 
+    array (
+      'pretty_version' => '2.8.2',
+      'version' => '2.8.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '19dd1de9d3f5fc4d7d70175b4c344dee329f45fd',
     ),
     'phenx/php-font-lib' => 
     array (
@@ -70,6 +79,24 @@ private static $installed = array (
       ),
       'reference' => '5fa61b65e612ce1ae15f69b3d223cb14ecc60e32',
     ),
+    'phpoffice/common' => 
+    array (
+      'pretty_version' => '0.2.9',
+      'version' => '0.2.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'edb5d32b1e3400a35a5c91e2539ed6f6ce925e4d',
+    ),
+    'phpoffice/phpword' => 
+    array (
+      'pretty_version' => '0.17.0',
+      'version' => '0.17.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b8346af548d399acd9e30fc76ab0c55c2fec03a5',
+    ),
     'sabberworm/php-css-parser' => 
     array (
       'pretty_version' => '8.3.1',
@@ -78,6 +105,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'd217848e1396ef962fb1997cf3e2421acba7f796',
+    ),
+    'zendframework/zend-escaper' => 
+    array (
+      'pretty_version' => '2.6.1',
+      'version' => '2.6.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3801caa21b0ca6aca57fa1c42b08d35c395ebd5f',
     ),
   ),
 );
