@@ -1,7 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 
-// reference the Dompdf namespace
+/* // reference the Dompdf namespace
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
@@ -32,4 +32,21 @@ $dompdf->loadHtml($html);
 $dompdf->render();
 
 // Output the generated PDF to Browser
-$dompdf->stream();
+$dompdf->stream(); */
+$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$templateProcessor = new TemplateProcessor('certificat_de_realisation_dynamique.docx');
+
+// Texte
+$templateProcessor->setValues(array('{nom_stagiaire}' => 'John', '{nom_formateur}' => 'Doe'));
+// Images
+$templateProcessor->setImageValue('{logo_bvf}', 'logo.png');
+
+// Save et Export
+$template->saveAs('tmp_file.docx');
+
+\PhpOffice\PhpWord\Settings::setPdfRendererPath('vendor/dompdf/dompdf');
+\PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
+
+$temp = \PhpOffice\PhpWord\IOFactory::load('tmp_file.docx');
+$xmlWriter = \PhpOffice\PhpWord\IOFactory::createWriter($temp , 'PDF');
+$xmlWriter->save('result.pdf');
