@@ -42,11 +42,11 @@ $templateProcessor->setValues(array('{nom_stagiaire}' => 'John', '{nom_formateur
 $templateProcessor->setImageValue('{logo_bvf}', 'logo.png');
 
 // Save et Export
-$templateProcessor->saveAs('tmp_file.docx');
+$templateProcessor->saveAs('tmp/tmp_file.docx');
 
 \PhpOffice\PhpWord\Settings::setPdfRendererPath('vendor/dompdf/dompdf');
 \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
 
-$temp = \PhpOffice\PhpWord\IOFactory::load('tmp_file.docx');
+$temp = \PhpOffice\PhpWord\IOFactory::load('tmp/tmp_file.docx');
 $xmlWriter = \PhpOffice\PhpWord\IOFactory::createWriter($temp , 'PDF');
 $xmlWriter->save('result.pdf');
