@@ -49,4 +49,4 @@ $templateProcessor->saveAs('tmp/tmp_file.docx');
 
 $temp = \PhpOffice\PhpWord\IOFactory::load('tmp/tmp_file.docx');
 $xmlWriter = \PhpOffice\PhpWord\IOFactory::createWriter($temp , 'PDF');
-$xmlWriter->save('result.pdf');
+$xmlWriter->save('tmp/result.pdf');
