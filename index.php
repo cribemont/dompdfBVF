@@ -42,7 +42,7 @@ $templateProcessor->setValues(array('{nom_stagiaire}' => 'John', '{nom_formateur
 $templateProcessor->setImageValue('{logo_bvf}', 'logo.png');
 
 // Save et Export
-$template->saveAs('tmp_file.docx');
+$templateProcessor->saveAs('tmp_file.docx');
 
 \PhpOffice\PhpWord\Settings::setPdfRendererPath('vendor/dompdf/dompdf');
 \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
