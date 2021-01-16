@@ -44,9 +44,6 @@ $templateProcessor->setImageValue('{logo_bvf}', 'logo.png');
 // Save et Export
 $templateProcessor->saveAs('tmp/tmp_file.docx');
 
-\PhpOffice\PhpWord\Settings::setPdfRendererPath('vendor/dompdf/dompdf');
-\PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-
 $temp = \PhpOffice\PhpWord\IOFactory::load('tmp/tmp_file.docx');
-$xmlWriter = \PhpOffice\PhpWord\IOFactory::createWriter($temp , 'PDF');
-$xmlWriter->save('tmp/result.pdf');
+
+Gears\Pdf::convert('tmp/tmp_file.docx', 'tmp/gears.pdf');
