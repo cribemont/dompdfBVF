@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Sabberworm\\CSS' => array($vendorDir . '/sabberworm/php-css-parser/lib'),
+    'PhantomInstaller\\' => array($vendorDir . '/jakoch/phantomjs-installer/src'),
+    'Icecave\\Parity' => array($vendorDir . '/icecave/parity/src'),
 );
